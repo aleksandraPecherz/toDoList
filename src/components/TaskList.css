@@ -1,0 +1,33 @@
+.activeTasks,
+.doneTasks {
+  display: flex;
+  margin: 5px 5px 5px 5px;
+  justify-content: center;
+  padding: 4px;
+  flex-wrap: wrap;
+  height: 244px;
+  overflow-x: hidden;
+  overflow-x: auto;
+  transition: all 0.3s ease-in-out;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.important {
+  -webkit-animation: fadeinout 4s linear 10 forwards;
+  animation: fadeinout 1s linear 10000 forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes fadeinout {
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+}
+
+@keyframes fadeinout {
+  50% {
+    transform: scale(1.05, 1.05);
+  }
+}

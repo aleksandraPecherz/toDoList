@@ -1,0 +1,126 @@
+:root {
+  --menu-backgroud-color: transparent;
+  --button-color: black;
+  --add-button-color: white;
+  --button-background-color: white;
+  --add-button-background-color: black;
+  --input-background-color: white;
+  --input-color: black;
+  --shadow-task-box: -2px 3px 5px rgb(0, 0, 0);
+  --shadow: -1px 2px 4px rgb(2, 2, 2);
+  --task-background-color: rgba(193, 194, 204, 0.732);
+  --button-click-background: transparent;
+  --shadow-information: -1px 2px 4px rgb(255, 255, 255);
+  --page--background: linear-gradient(
+    to right,
+    #d68d1a,
+    #d99829,
+    #dca237,
+    #e0ad44,
+    #e3b751,
+    #e6bf5f,
+    #e8c76d,
+    #ebcf7b,
+    #eed88d,
+    #f1e09f,
+    #f5e8b1,
+    #f9f0c3
+  );
+}
+.taskActive,
+.taskDone {
+  display: flex;
+  align-items: flex-start;
+  width: 100px;
+  height: 100px;
+  background-color: var(--task-background-color);
+  flex-direction: column;
+  font-size: 12px;
+  margin: 5px 20px 8px 20px;
+  padding: 5px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.contentActiveSmall,
+.contentActiveBig,
+.contentDoneSmall,
+.contentDoneBig,
+.contentDone,
+.endDateDone,
+.datesActive,
+.endDateDone {
+  word-wrap: break-word;
+}
+.isClicked {
+  width: 190px;
+  height: 190px;
+  background-color: var(--task-background-color);
+  font-size: 12px;
+  margin: 10px 10px 30px 10px;
+  padding: 5px;
+  box-shadow: var(--shadow-task-box);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.contentActiveSmall,
+.contentDoneSmall {
+  height: 70px;
+  width: 100px;
+  margin: 5px 0px;
+}
+.contentActiveBig,
+.contentDoneBig {
+  height: 100px;
+  width: 190px;
+  margin: 10px 0px 5px 0px;
+  vertical-align: text-bottom;
+}
+.contentActiveBigEdit input {
+  word-wrap: break-word;
+}
+.contentActiveBigEdit {
+  height: 63px;
+  width: 190px;
+  color: green;
+  margin: 10px 0px 5px 0px;
+  vertical-align: text-bottom;
+  word-wrap: break-word;
+}
+button {
+  border: none;
+}
+.basicMenu {
+  float: left;
+}
+.icon-resize-full,
+.icon-resize-small {
+  font-size: 14px;
+}
+.icon-check,
+.icon-trash-empty,
+.icon-floppy,
+.icon-cog-outline,
+.icon-back {
+  align-items: flex-end;
+  font-size: 17px;
+}
+
+.icon-floppy,
+.icon-cog-outline {
+  color: orange;
+}
+.icon-trash-empty {
+  color: red;
+}
+.icon-check {
+  color: green;
+}
+textarea {
+  height: 60px;
+}
+.datesActive,
+.endDateDone {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

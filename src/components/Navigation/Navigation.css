@@ -1,0 +1,189 @@
+:root {
+  --menu-backgroud-color: transparent;
+  --button-color: black;
+  --add-button-color: white;
+  --button-background-color: white;
+  --add-button-background-color: black;
+  --input-background-color: white;
+  --input-color: black;
+  --shadow-task-box: -2px 3px 5px rgb(0, 0, 0);
+  --shadow: -1px 2px 4px rgb(2, 2, 2);
+  --task-background-color: rgba(193, 194, 204, 0.732);
+  --button-click-background: transparent;
+  --shadow-information: -1px 2px 4px rgb(255, 255, 255);
+  --page--background: linear-gradient(
+    to right,
+    #d68d1a,
+    #d99829,
+    #dca237,
+    #e0ad44,
+    #e3b751,
+    #e6bf5f,
+    #e8c76d,
+    #ebcf7b,
+    #eed88d,
+    #f1e09f,
+    #f5e8b1,
+    #f9f0c3
+  );
+}
+.addNavigation {
+  height: 55px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--menu-backgroud-color);
+}
+.addNavigationTrigger,
+#add,
+.howTo {
+  width: 150px;
+  height: 40px;
+  background: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+}
+
+.addNavigationTrigger:hover,
+#add:hover,
+.howTo:hover {
+  text-decoration: blink;
+  color: red;
+}
+p.navigationText,
+span.navigationText {
+  font-family: "AmaticSC-Regular";
+  margin: 0px;
+  font-size: 30px;
+}
+#add {
+  color: var(--add-button-color);
+  margin-top: 30px;
+}
+.addNavigationTrigger,
+.howTo {
+  color: var(--button-color);
+}
+.addNavigationTrigger:hover ~ .form,
+.form:hover {
+  transform: translateX(0);
+}
+.howTo:hover ~ .instruction,
+.instruction:hover {
+  transform: translateX(0);
+}
+
+.form {
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  top: 55px;
+  right: 20vh;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  height: 450px;
+  width: 400px;
+  background: var(--add-button-background-color);
+  align-content: center;
+  transform: translateY(-509px);
+  transition: 0.4s transform ease-in-out;
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+.instruction {
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  top: 55px;
+  left: 20vh;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 480px;
+  width: 450px;
+  background: var(--add-button-background-color);
+  align-content: center;
+  transform: translateY(-609px);
+  transition: 0.4s transform ease-in-out;
+  box-shadow: var(--shadow);
+  z-index: 2;
+}
+#priority,
+#beginDate,
+#endEate,
+#textContent {
+  background: var(--input-background-color);
+}
+.formElement {
+  background: var(--input-background-color);
+  margin: 15px 50px 10px 50px;
+  color: var(--input-color);
+  font-size: 20px;
+  border-radius: 5px;
+  flex-basis: 100%;
+  padding: 5px;
+  box-shadow: var(--shadow);
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.inactive {
+  display: none;
+}
+.important-task {
+  height: 15px;
+  width: 15px;
+  background-color: var(--task-background-color);
+  border-radius: 5px;
+  box-shadow: var(--shadow-information);
+  -webkit-animation: fadeinout 4s linear 10 forwards;
+  animation: fadeinout 1s linear 10000 forwards;
+  animation-fill-mode: forwards;
+  display: inline-flex;
+  margin: 0px;
+}
+
+.instructionContent {
+  text-align: justify;
+  color: white;
+  margin: 5px;
+  padding: 0;
+  font-size: 14px;
+}
+.title {
+  font-family: "AmaticSC-Regular";
+  font-size: 17px;
+}
+
+@media screen and (min-width: 1500px) {
+  .instruction {
+    left: 30vh;
+  }
+  .form {
+    right: 30vh;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1500px) {
+  .instruction {
+    left: 70px;
+  }
+  .form {
+    right: 70px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .instruction {
+    left: 5px;
+  }
+  .form {
+    right: 5px;
+  }
+}

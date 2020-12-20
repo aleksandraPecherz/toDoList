@@ -1,0 +1,54 @@
+:root {
+  --menu-backgroud-color: transparent;
+  --button-color: black;
+  --add-button-color: white;
+  --button-background-color: white;
+  --add-button-background-color: black;
+  --input-background-color: white;
+  --input-color: black;
+  --shadow-task-box: -2px 3px 5px rgb(0, 0, 0);
+  --shadow: -1px 2px 4px rgb(2, 2, 2);
+  --task-background-color: rgba(193, 194, 204, 0.732);
+  --button-click-background: transparent;
+  --shadow-information: -1px 2px 4px rgb(255, 255, 255);
+  --page--background: linear-gradient(
+    to right,
+    #d68d1a,
+    #d99829,
+    #dca237,
+    #e0ad44,
+    #e3b751,
+    #e6bf5f,
+    #e8c76d,
+    #ebcf7b,
+    #eed88d,
+    #f1e09f,
+    #f5e8b1,
+    #f9f0c3
+  );
+}
+.main {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: white;
+  color: black;
+  font-family: "Cinzel-Regular";
+  background: var(--page--background);
+  text-transform: uppercase;
+  overflow-x: hidden;
+  overflow-x: auto;
+}
+button {
+  background-color: var(--button-click-background);
+  outline: 0;
+}
+
+input,
+select,
+textarea {
+  color: grey;
+  border: 1px solid var(--input-color);
+  width: 95%;
+  outline: 0;
+}
